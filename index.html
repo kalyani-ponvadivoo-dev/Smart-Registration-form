@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Registration form</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 min-h-screen flex justify-center items-center">
+    <!-- //contact form input fields -->
+    <div class="bg-white w-full max-w-md shadow-lg p-8 rounded-xl">
+        <h1 class="text-2xl justify-center text-center font-bold mb-2">Create your Account</h1>
+        <p class="text-gray-500 mb-5 text-center">Please fill in your details to register.</p>
+        <!--Registration Form-->
+        <form id="registrationform">
+            <!--Name-->
+            <div class="mb-4">
+                <label class="block font-medium mb-2">Name</label>
+                <input type="text" placeholder="Enter your name" id="name" required
+                    class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <p id="nameError" class="text-red-500 text-sm mt-1"></p>
+            </div>
+            <!--Email-->
+            <div class="mb-4">
+                <label class="block font-medium mb-2">Email</label>
+                <input type="email" placeholder="Enter your mail id" id="email" required
+                    class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <p id="emailError" class="text-red-500 text-sm mt-1"></p>
+            </div>
+            <!--Password-->
+            <div class="mb-4">
+                <label class="block font-medium mb-2">Password</label>
+                <input type="password" placeholder="Enter your password" minlength=6 id="password" required
+                    class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <p id="passwordError" class="text-red-500 text-sm mt-1"></p>
+            </div>
+            <!--Bio Text area-->
+            <div class="block font-medium mb-2">
+                <label>Bio</label>
+                <textarea id="bio" placeholder="Tell something about you" maxlength="200" required
+                    class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                <p id="counter" class="text-right text-sm text-gray-500">
+                    0 / 200 characters
+                </p>
+                <p id="bioError" class="text-red-500 text-sm mt-1"></p>
+            </div>
+            <div class="block font-medium mb-2">
+                <button type="submit" id="submitbtn" disabled
+                    class="w-full bg-blue-500 text-white rounded-lg p-3 hover:bg-blue-600 disabled:bg-gray-400">
+                    Submit</button>
+                <p id="successMessage" class="text-green-600 text-sm mt-3"></p>
+            </div>
+
+        </form>
+
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>
